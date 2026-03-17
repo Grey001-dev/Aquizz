@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="script.js" defer></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#af25f4",
+                "background-light": "#f7f5f8",
+                "background-dark": "#1c1022",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<title>JAMB Arena - Gamified Prep</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 flex items-center justify-between p-4 border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">sports_esports</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">JAMB Arena</h2>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden md:block text-sm font-medium hover:text-primary transition-colors" href="#">Leaderboard</a>
+<a class="hidden md:block text-sm font-medium hover:text-primary transition-colors" href="#">Battles</a>
+<button onclick="window.location.href = 'signup.html'" class="px-5 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary font-bold text-sm hover:bg-primary/20 transition-all">
+                Login
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 py-12 @container">
+<div class="flex flex-col gap-10 @[864px]:flex-row @[864px]:items-center">
+<!-- Text Content -->
+<div class="flex flex-col gap-8 flex-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        2,450 Players Online
+                    </div>
+<div class="flex flex-col gap-4">
+<h1 class="text-5xl @[480px]:text-6xl font-black leading-tight tracking-tight">
+                            Conquer JAMB Through <span class="text-primary">1v1 Battles</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg @[480px]:text-xl max-w-xl leading-relaxed">
+                            Stop boring study routines. Master your syllabus with high-stakes mock exams and real-time gaming challenges. Turn your score into a victory.
+                        </p>
+</div>
+<div class="flex flex-col @[480px]:flex-row gap-4">
+<button onclick="window.location.href = 'signup.html'" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white text-lg font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(175,37,244,0.4)]">
+<span>Start Winning</span>
+<span class="material-symbols-outlined">bolt</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                            View Demo
+                        </button>
+</div>
+</div>
+<!-- Visual Element -->
+<div class="flex-1 relative">
+<div class="aspect-square rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl relative group" data-alt="Futuristic gaming UI showing student leaderboard">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+<img alt="Dashboard Preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgbonIt7QjQRtrfADLqMDHYvpfNqugSV1F9Z_ZaxZdtysC12K_ITfqxEFeV0CRyTmQDdpOEH4rgv0jYKPQaCGkUE3y0iuDvWkjdURxwttJGsWl8DF2M0TNMqv9ICUUFZaMNHafTab_HkPviOIwjM4wf1RH01JXiKDXKb249vhW59aW2J8VkRghTrfaR6uQIGt2zQMawWRH8IAD1RRWcr1oYsDnwtkpzSVnh-6JJoToLdF9zX1J7IDY82T-rEo_b7jm8s0tPEga5fs"/>
+<div class="absolute bottom-6 left-6 right-6 z-20 bg-background-dark/80 backdrop-blur-md p-4 rounded-xl border border-primary/40">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-primary font-bold">CURRENT RANK</span>
+<span class="text-xs text-slate-400">XP: 14,500</span>
+</div>
+<div class="h-2 w-full bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%]"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Cards -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 backdrop-blur-xl rounded-2xl border border-primary/40 flex flex-col items-center justify-center gap-1 hidden @[480px]:flex shadow-lg">
+<span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+<span class="text-xs font-bold uppercase">Gold Tier</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="max-w-7xl mx-auto px-4 pb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 rounded-2xl p-8 bg-slate-100 dark:bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors group">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-widest">Active Players</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold">50K+</p>
+<span class="text-primary material-symbols-outlined text-lg">trending_up</span>
+</div>
+<p class="text-xs text-slate-400">Competing globally right now</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-8 bg-slate-100 dark:bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-widest">Battles Won</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold">1.2M</p>
+<span class="text-primary material-symbols-outlined text-lg">swords</span>
+</div>
+<p class="text-xs text-slate-400">Subjects mastered via duels</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-8 bg-slate-100 dark:bg-primary/5 border border-primary/10 hover:border-primary/30 transition-colors">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-widest">Mock Exams</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold">500+</p>
+<span class="text-primary material-symbols-outlined text-lg">history_edu</span>
+</div>
+<p class="text-xs text-slate-400">Authentic past question banks</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Features Grid -->
+<section class="py-20 bg-slate-100/50 dark:bg-background-dark/50 border-y border-primary/10">
+<div class="max-w-7xl mx-auto px-4">
+<div class="mb-16 text-center">
+<h2 class="text-3xl @[480px]:text-4xl font-black mb-4">Level Up Your Prep</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Traditional studying is boring. We turned the JAMB syllabus into a competitive sport with high stakes and real rewards.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-primary/20 bg-background-light dark:bg-slate-900/50 p-6 hover:-translate-y-2 transition-transform shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">swords</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">1v1 Rank Battles</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Challenge peers in real-time subject duels. Faster correct answers win the match and boost your rank.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-primary/20 bg-background-light dark:bg-slate-900/50 p-6 hover:-translate-y-2 transition-transform shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">timer</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Pro Mock Exams</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Timed simulations that feel like the real thing. Get detailed analytics on your strengths and weaknesses.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col gap-4 rounded-2xl border border-primary/20 bg-background-light dark:bg-slate-900/50 p-6 hover:-translate-y-2 transition-transform shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">trophy</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Reward Quests</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Earn XP, unlock exclusive study badges, and climb the global leaderboard to win real prizes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Highlights -->
+<section class="py-20 max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer" data-alt="Dynamic global leaderboard with user avatars">
+<img alt="Leaderboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-rHFiLCpUMbMnHEyczkmlv7tAg9sAu8ZlBfpcNcljNWZLwYePbmRhO7rkw7L0aMUhdbG0X2jkASPc_oo51T4oD9bvDtNw8NOPFmlTSqRL8hp4Y7YqX4K0aAai2gUmrOD3l3nvubmTg-alIHqlvRou4FQFVwHHx47r79ni_3OfB87oBeOoaCG1Yna9G8KMRwOKxbWHKDzT5VbPCri5bXvN2JOykSt5vLYb953yVccssjn-60GG-NQrkp2PEgB2tW8ohblV7NpPOoc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-2xl font-black text-white">Global Leaderboard</h4>
+<p class="text-white/80 text-sm">See how you stack up against the best in the country.</p>
+</div>
+</div>
+<div class="relative h-64 rounded-2xl overflow-hidden group cursor-pointer" data-alt="Data visualization of student performance metrics">
+<img alt="Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCckz8ApfKxPEv5add3cJ1yrUpidJ8q3Zin1biO3GPg-CNsXLwwP7ZwRs5pMCzijFp87vKGJfe9V1jOOoRu3KGWY3okS88xz9uyQaUGBDBmU2AVBZJfjOGImY0OKIflvX7WKJ7nZVdQ5zoj1k1Wyt80qpAJhRAwLMfLYSB5RG6LwblB-74pKADk9H_avyEyRoZLXnUu1ilJrsM2vY7DlQThBGpqUbxXGp9klmcZXtvK0ZMt-Q4hg2aS0jKR7RvBGfzbpMANCoLO7Ik"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-2xl font-black text-white">Instant Analysis</h4>
+<p class="text-white/80 text-sm">AI-driven feedback on every answer you get wrong.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Footer -->
+<footer class="bg-primary/5 border-t border-primary/10 py-16">
+<div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center gap-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">stadium</span>
+<h3 class="text-3xl font-black">Ready to Enter the Arena?</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xl text-lg">
+                Join thousands of students who are turning study hours into victory laps. Start your first 1v1 battle now.
+            </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg">
+                    Join the Battle
+                </button>
+<button class="bg-transparent border border-primary text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/10">
+                    Browse Subjects
+                </button>
+</div>
+<div class="mt-12 flex flex-col items-center gap-4">
+<div class="flex gap-6 text-slate-400">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<p class="text-xs text-slate-500">© 2024 JAMB Arena. All rights reserved. Gaming the system for good.</p>
+</div>
+</div>
+</footer>
+</body></html>

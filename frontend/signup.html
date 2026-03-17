@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JAMB Prep - Level Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="script.js" defer></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#af25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-3xl">chevron_left</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1">Create Account</h2>
+<div class="text-primary/50 text-sm font-bold">STEP 1/3</div>
+</div>
+<!-- Hero Section -->
+<div class="px-4 pt-6 pb-3">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-[32px] font-bold leading-tight">Level Up Your Prep</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal mt-2">Join thousands of students smashing their JAMB goals.</p>
+</div>
+<!-- Social/Auth Options -->
+<div class="flex flex-col gap-3 px-4 py-3">
+<button class="flex items-center justify-center gap-3 w-full h-14 rounded-xl bg-white dark:bg-primary/10 border border-primary/20 hover:bg-primary/5 transition-colors">
+<img alt="" class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6IhH76-hwDZm2UhJwfKkcoeR5dIw7NIcBv0ol2wp-66ai0Ol8gITzgDQlO3bVksOXBhTy9mXzEpKHGPH_oY9wRiueW74rE7VH3NJcSEhdcKSNMGwdcygxUUv6_cKzq98k105WtaK_LRHFJ6gnWulz97mZY5r7TjcWeF2iiGwJ9S739vILyq-aV7ZFnBIkLLcnhzWLmuwySWAQtaQNwyPFo23ZXt1eX_56ZhI5Dq2IcQSRFBWwFRhOJanNdchFj8Tw6_g6hAPeP0"/>
+<span class="font-bold">Continue with Google</span>
+</button>
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-primary/20"></div>
+<span class="text-primary/40 text-xs font-bold uppercase tracking-widest">or</span>
+<div class="h-px flex-1 bg-primary/20"></div>
+</div>
+<label class="flex flex-col gap-2">
+<span class="text-sm font-bold text-primary/80 ml-1">Email or Phone</span>
+<input class="form-input w-full rounded-xl bg-white dark:bg-primary/5 border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary h-14 px-4 text-base" placeholder="student@jamb.com" id="email" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-sm font-bold text-primary/80 ml-1">Create password</span>
+<input class="form-input w-full rounded-xl bg-white dark:bg-primary/5 border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary h-14 px-4 text-base" placeholder="******" id="createPassword" type="password"/>
+</label>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-14 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 mt-2" onclick="">
+<span>Join the League</span>
+<span class="material-symbols-outlined ml-2">rocket_launch</span>
+</button>
+</div>
+<!-- Avatar Selection Grid -->
+<div class="px-4 py-6">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">face_6</span>
+                Choose your Avatar
+            </h3>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-full bg-primary ring-4 ring-primary shadow-xl overflow-hidden cursor-pointer relative">
+<img alt="" class="w-full h-full" data-alt="Cartoon avatar of a student character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnrpERJjBz2tLuwhVNp2KwU7ZgljWlGCc0NbAWa__Lf6EeRSAKaw2lVXVdr4cqNUYjH2znMcN_uKhUDezDNuBfGF1HO4lsRMIHe2n4jFjRftbBIfqWDUz1mwxh6-PU2MnXz88zIweT4uvFG-a3ezN4YvvGDI_jdtbattiqQ-YiBsxxpCNnLr9Y2xQ7xB84d9RFrwLiFKEdHXy-2FccOykR72Ihx2AvCWYRjqt1TtZKF4_nGxP5gx5nQk_cWX6ODSqEBg70wgSAps"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">check_circle</span>
+</div>
+</div>
+<div class="aspect-square rounded-full bg-primary/10 border-2 border-primary/20 overflow-hidden cursor-pointer hover:border-primary transition-all">
+<img alt="" class="w-full h-full opacity-70" data-alt="Cartoon avatar of a female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeqOy-hX8Eos6uoDluBBVigymgShk_hov56JvDqSBXPD0jcf7vb8xxp4QKXrpsTu9zWCT-TmS-ucoTjPPcOOUFXtZ5e5XfCXfG7P3TjwVVc1lKmVUE5nBqyABPLgSPgEw4b1SFSBFPLKbDk02xxO02X6vnsrnM2reUhcdeLNbhvAx_L8qcpBreJQIFDkCf5nuC2RSi1BKB8xPBff172Yo9YKsuU-fHfeepSgfuuQK-rCQ1dS7SNd3gDW7dvA8MzJcDN-Tv7TTlr3M"/>
+</div>
+<div class="aspect-square rounded-full bg-primary/10 border-2 border-primary/20 overflow-hidden cursor-pointer hover:border-primary transition-all">
+<img alt="" class="w-full h-full opacity-70" data-alt="Cartoon avatar with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYPDYvvBgur6J_9Z_MkVw4VL4crsyrAhe966N787OdyG8wS0t1Q1TCxrgX4yj8GpHHrwcHjv9Mz2nEyCs5IuzAgOZMlahHrfFk0hoWkBd9HUDO1F_uioBQ1vqp_CndcoV3MboYZNiJt594liVcZ1dsDECU_s6KllTpyF2javisOeInLv0C2_sGIS8xJ6ExzwKgDXDjnjkk3s_rBBrt4cN9K0wVKj0SKOgMi8OeQRse3ABaS3cYMlqyt3x829vMiAc6hfBDRUwccHE"/>
+</div>
+<div class="aspect-square rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center cursor-pointer hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary">add</span>
+</div>
+</div>
+</div>
+<!-- Subject Selection -->
+<div class="px-4 py-6 bg-primary/5 rounded-t-[2rem] mt-4 flex-1">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+                    Pick 4 Subjects
+                </h3>
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-bold">1/4 SELECTED</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Selected Subject -->
+<div class="flex items-center justify-between p-4 bg-primary rounded-xl text-white shadow-lg shadow-primary/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-bold">Use of English</span>
+</div>
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<!-- Available Subjects -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/10 border border-primary/20 rounded-xl hover:border-primary cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">calculate</span>
+<span class="font-medium">Mathematics</span>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/10 border border-primary/20 rounded-xl hover:border-primary cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">science</span>
+<span class="font-medium">Physics</span>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/10 border border-primary/20 rounded-xl hover:border-primary cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">biotech</span>
+<span class="font-medium">Chemistry</span>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-primary/10 border border-primary/20 rounded-xl hover:border-primary cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+<span class="font-medium">Government</span>
+</div>
+<span class="material-symbols-outlined text-primary/30 group-hover:text-primary">add_circle</span>
+</div>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="sticky bottom-0 w-full p-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-primary/10">
+<div class="flex gap-4">
+<button class="flex-1 h-12 rounded-xl font-bold text-primary border-2 border-primary hover:bg-primary/10 transition-colors">
+                    Skip for now
+                </button>
+<button class="flex-[2] h-12 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/40 disabled:opacity-50" disabled="">
+                    Enter Arena
+                </button>
+</div>
+</div>
+</div>
+</body></html>

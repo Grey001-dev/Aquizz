@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#af25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Tournament Lobby</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20 p-4">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="text-lg font-bold tracking-tight">Cyber-High Invitational</h1>
+<p class="text-xs text-primary font-medium uppercase tracking-widest">Regional Qualifiers</p>
+</div>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full p-4 space-y-6">
+<!-- Countdown Section -->
+<section class="space-y-3">
+<h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider px-1">Tournament Starts In</h2>
+<div class="flex gap-3">
+<div class="flex-1 flex flex-col items-center bg-primary/10 border border-primary/20 rounded-xl py-4">
+<span class="text-2xl font-bold text-primary">02</span>
+<span class="text-[10px] uppercase font-medium text-slate-500">Days</span>
+</div>
+<div class="flex-1 flex flex-col items-center bg-primary/10 border border-primary/20 rounded-xl py-4">
+<span class="text-2xl font-bold text-primary">14</span>
+<span class="text-[10px] uppercase font-medium text-slate-500">Hrs</span>
+</div>
+<div class="flex-1 flex flex-col items-center bg-primary/10 border border-primary/20 rounded-xl py-4">
+<span class="text-2xl font-bold text-primary">45</span>
+<span class="text-[10px] uppercase font-medium text-slate-500">Min</span>
+</div>
+<div class="flex-1 flex flex-col items-center bg-primary/10 border border-primary/20 rounded-xl py-4">
+<span class="text-2xl font-bold text-primary">12</span>
+<span class="text-[10px] uppercase font-medium text-slate-500">Sec</span>
+</div>
+</div>
+</section>
+<!-- Team Status Section -->
+<section class="bg-slate-800/20 dark:bg-slate-900/40 border border-primary/10 rounded-2xl p-5 space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xl font-bold">Alpha Wolves</h2>
+<p class="text-sm text-slate-400">Competitive • Diamond Rank</p>
+</div>
+<div class="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    4/5 Members
+                </div>
+</div>
+<!-- Member List -->
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-white/5">
+<div class="flex items-center gap-3">
+<img alt="Member Avatar" class="w-10 h-10 rounded-full bg-primary/20" data-alt="Cartoon avatar of a gamer with headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0-h03_odQKWhFRikhKsXoVrlqaFpWDLJeeDqRkMMoXlLF2t_mnb5Bf3I8VsOsDAooIsZA_zb_3fZopoBZBeb9yuF6qR2lMmx116TBzs8z_Tq1_BbnameQltHoLIb6SJM6siOB0bKgTA-8sR21C5StGpr3DOQwqMzKdigU4ZhPykKD7yz-WYWPgDYbZ0CcZSkPTZhhSWthqHgeJ9t1Z-1aq2d5Zl-zEqSCEbXRWzj6eesLULqEUMf3r8kDGoVP92YMMp0-9uQdDuo"/>
+<div>
+<p class="text-sm font-bold">WolfLeader_01 <span class="text-[10px] text-primary ml-1">(Captain)</span></p>
+<p class="text-[10px] text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span> Ready
+                            </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-white/5">
+<div class="flex items-center gap-3">
+<img alt="Member Avatar" class="w-10 h-10 rounded-full bg-primary/20" data-alt="Cartoon avatar of a female student gamer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwf-tWskj_GFk85RWUmZYI7UxjJOYIi5LgBRMtzCh7DYHkdWkK3sFZ4zFeSTns9MrWbLOqsSNCjtbzPHx_Z8F8SYQs-CXG-dYff-uA46a6sFBhWtdzio6dqHn7mV5T5w4I8LHtT630uGx4Mz22PqH_dOXXySwEWX-fLJBHvwgn9593grqJOWB91JkEctDlOT9G1RnZYUmNGYUdvt86RT0I1xTFwe6_LOKJOFXsVA-8ohn8SDc6aMCj5BsjIuA1nuAVa7TPyHaPhaw"/>
+<div>
+<p class="text-sm font-bold">PixelPioneer</p>
+<p class="text-[10px] text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span> Ready
+                            </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-white/5">
+<div class="flex items-center gap-3">
+<img alt="Member Avatar" class="w-10 h-10 rounded-full bg-primary/20" data-alt="Cartoon avatar of a gamer with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClaYwjiERw3ooLd7cdVHfsDQh3Ax0ZWtpGOQp7c7spah71GsqLf8VtDUXKH776PN-o0XFYTkD5zWa0LuN9SqB4Bf_OfdQYhd8PIUKZkH4QjUKQcOd0zlyglIrpGyn7ZPN-vSw1Z7PKsx1NlE-94hxiaY-G8LbhbkXsJD2tH2bAGvHBDinWIw2CnGg46-eQZsitV3VkQ25_-xlpyH7Ba88nMVO_RhkwzNQjpT8LFCdZm1M850lvc9GLPBMZrn-J8hxIXzUcKVl4HCQ"/>
+<div>
+<p class="text-sm font-bold">ShadowStrike</p>
+<p class="text-[10px] text-amber-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-amber-400 rounded-full"></span> Not Ready
+                            </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-600 text-sm">radio_button_unchecked</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-primary/40">
+<div class="flex items-center gap-3">
+<img alt="Member Avatar" class="w-10 h-10 rounded-full bg-primary/20 ring-2 ring-primary ring-offset-2 ring-offset-background-dark" data-alt="Cartoon avatar of the current user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIRDBs2oN1oFT89BbMMi4iAh3vG0dSJTgCTaPvoh0DToE1iaEELmKHkJQlrob57quIkUtsOMylJoTM4MGZ1djW6jSfVX65CJbFWYEWbgGCUOGjogiBaCEWWGsV_95tBTKSyP7qOQQTFwksZffI-Gce9j7sYdxgs9HGZO7RRDbmMtlFtEGk88m-zAUcHn07L7lOIw5V6J5K0v_RZsKFXHdq6XeeevbGXxjod2mg3KbCDFLFMT_sVH1hyCBtrWHArCevblWUWPMLXa8"/>
+<div>
+<p class="text-sm font-bold">You (AlphaStudent)</p>
+<p class="text-[10px] text-slate-400">Waiting for toggle...</p>
+</div>
+</div>
+<!-- Ready Toggle -->
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition"></span>
+</button>
+</div>
+<!-- Empty Slot -->
+<button class="w-full border-2 border-dashed border-primary/20 rounded-xl p-3 flex items-center justify-center gap-2 text-primary/60 hover:text-primary hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined">person_add</span>
+<span class="text-sm font-medium">Invite Teammate</span>
+</button>
+</div>
+</section>
+<!-- Chat Preview -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Team Chat</h2>
+<button class="text-xs text-primary font-bold">Open Full Chat</button>
+</div>
+<div class="bg-slate-800/20 dark:bg-slate-900/40 border border-primary/10 rounded-2xl p-4 h-32 overflow-hidden relative">
+<div class="space-y-2 opacity-60">
+<p class="text-xs"><span class="font-bold text-primary">WolfLeader_01:</span> Let's practice the mid-lane strategy at 7.</p>
+<p class="text-xs"><span class="font-bold text-slate-300">PixelPioneer:</span> I'm down. Just finished my homework.</p>
+<p class="text-xs"><span class="font-bold text-slate-300">ShadowStrike:</span> Can't wait for the bracket reveal!</p>
+</div>
+<!-- Fade effect -->
+<div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background-dark to-transparent"></div>
+<!-- Input field simulation -->
+<div class="absolute bottom-3 left-4 right-4 bg-slate-800 border border-white/10 rounded-full px-4 py-1.5 flex items-center justify-between">
+<span class="text-[11px] text-slate-500">Send a message...</span>
+<span class="material-symbols-outlined text-sm text-primary">send</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 bg-background-light dark:bg-[#231b27] border-t border-primary/10 px-4 pb-6 pt-2">
+<div class="max-w-md mx-auto flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">group</span>
+<p class="text-xs font-medium leading-normal">Lobby</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<p class="text-xs font-medium leading-normal">Bracket</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<p class="text-xs font-medium leading-normal">Rules</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-xs font-medium leading-normal">Settings</p>
+</a>
+</div>
+</nav>
+</body></html>

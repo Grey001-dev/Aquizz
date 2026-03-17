@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#af25f4",
+              "background-light": "#f7f5f8",
+              "background-dark": "#1c1022",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>JAMB Duel - 1v1 Battle</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 justify-between border-b border-primary/10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-primary text-lg font-bold leading-tight tracking-tight uppercase">JAMB Duel</h2>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Physics • Round 6/10</p>
+</div>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-primary hover:bg-primary/10">
+<span class="material-symbols-outlined">report</span>
+</button>
+</div>
+</div>
+<!-- Battle Header: Player Stats & Timer -->
+<div class="px-4 py-6 bg-gradient-to-b from-primary/5 to-transparent">
+<div class="flex items-center justify-between gap-4 max-w-2xl mx-auto">
+<!-- Player 1 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="relative">
+<div class="size-20 rounded-full border-4 border-primary p-1 bg-background-dark">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover" data-alt="Cartoon avatar of a young student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5bNFbw3bA1-FAxqqe4hng-IM98JQkWseOvtsphXlfUL_XpPeBmlvPUp-aI8R3kmbng3u3IO9JjLqECgNvt98ReIoRrWXh_wKFB5zO-IpdXSy9HTNywoSBDSOzNbt3ux7zOZNqmQDWeZRFg_3P1AuNtP9sThBWtlfft2oD7_Tz9ofsEWuSuMCs2C7yAEdIL3kzPKe-xLeX_9ZBoRTqNe9nqeq641wBz6dSXaBTLA_UY7uGHtqUgWprM75jzLBkwTV6MRsPNQ3KnXQ"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full">YOU</div>
+</div>
+<div class="text-center mt-2">
+<p class="text-slate-900 dark:text-slate-100 font-bold">You</p>
+<p class="text-primary text-xl font-black">450</p>
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full w-[60%]"></div>
+</div>
+</div>
+</div>
+<!-- Timer Middle -->
+<div class="flex flex-col items-center justify-center px-4">
+<div class="text-slate-400 text-[10px] font-bold uppercase mb-1">Time Left</div>
+<div class="size-16 rounded-full border-4 border-slate-200 dark:border-slate-800 flex items-center justify-center relative">
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="40" stroke-width="4"></circle>
+</svg>
+<span class="text-2xl font-bold text-slate-900 dark:text-slate-100">15</span>
+</div>
+<div class="mt-2 text-primary text-[10px] font-bold animate-pulse">VS</div>
+</div>
+<!-- Player 2 (Opponent) -->
+<div class="flex flex-col items-center gap-2 flex-1 text-right">
+<div class="relative">
+<div class="size-20 rounded-full border-4 border-slate-300 dark:border-slate-700 p-1 bg-background-dark">
+<img alt="Opponent Avatar" class="w-full h-full rounded-full object-cover" data-alt="Cartoon avatar of a competitive opponent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ5YFzNVXJrVCgKMXmIZgik66wBV4zc1GiN2IW3oPCsEq8uKii-RU5KamJZaYqG7X0RS1J-cKu8tk7MR2565NaEZhHcK9raOSrNYtmW2JAIDW3BUAlMqNQz03Q3vJbU40wE3c96L7T6AhWe__-1mwViVMhF23EJfFu7dGpJvZw5iGnhF20tkuE1I9uXkfzYpPtfAFt3n8laVHBMM3wsyeRMKcfe7dGvymMCYIVljzEOmSiKTjeCCyDalSSG2RdCqnWyhGACWYanTM"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">LVL 14</div>
+</div>
+<div class="text-center mt-2">
+<p class="text-slate-900 dark:text-slate-100 font-bold">Chisom</p>
+<p class="text-slate-500 dark:text-slate-400 text-xl font-black">420</p>
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full mt-1 overflow-hidden ml-auto">
+<div class="bg-slate-400 h-full w-[55%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Question Section -->
+<div class="px-4 max-w-2xl mx-auto">
+<div class="bg-white dark:bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded">PHYSICS</span>
+<span class="text-slate-400 text-xs font-medium">Question 6 of 10</span>
+</div>
+<p class="text-lg font-medium text-slate-900 dark:text-slate-100 leading-relaxed">
+                A body of mass 2kg is projected vertically upwards with a velocity of 20m/s. Calculate the maximum height reached. [Take g = 10m/s²]
+            </p>
+</div>
+<!-- Options Grid -->
+<div class="mt-6 grid grid-cols-1 gap-3">
+<button class="group flex items-center gap-4 p-4 rounded-xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 hover:border-primary/50 transition-all text-left">
+<span class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 group-hover:bg-primary group-hover:text-white font-bold transition-colors">A</span>
+<span class="text-slate-700 dark:text-slate-300 font-medium">10 meters</span>
+</button>
+<!-- Correct Selection Example -->
+<button class="group flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary/5 transition-all text-left">
+<span class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white font-bold">B</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold flex-1">20 meters</span>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</button>
+<button class="group flex items-center gap-4 p-4 rounded-xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 hover:border-primary/50 transition-all text-left">
+<span class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 group-hover:bg-primary group-hover:text-white font-bold transition-colors">C</span>
+<span class="text-slate-700 dark:text-slate-300 font-medium">40 meters</span>
+</button>
+<button class="group flex items-center gap-4 p-4 rounded-xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 hover:border-primary/50 transition-all text-left">
+<span class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 group-hover:bg-primary group-hover:text-white font-bold transition-colors">D</span>
+<span class="text-slate-700 dark:text-slate-300 font-medium">200 meters</span>
+</button>
+</div>
+</div>
+<!-- Live Duel Status Footer -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark/90 backdrop-blur-md border-t border-primary/10">
+<div class="max-w-2xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<div class="size-6 rounded-full border-2 border-background-dark bg-green-500"></div>
+<div class="size-6 rounded-full border-2 border-background-dark bg-red-500"></div>
+</div>
+<p class="text-xs font-medium text-slate-500">
+<span class="text-green-500">Opponent</span> answered incorrectly!
+                </p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">psychiatry</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Power-ups sidebar (Mobile Floating) -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+<button class="size-12 rounded-full bg-primary/20 backdrop-blur text-primary border border-primary/30 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">flare</span>
+<div class="absolute -top-1 -right-1 size-5 bg-primary text-white text-[10px] rounded-full flex items-center justify-center font-bold">2</div>
+</button>
+<button class="size-12 rounded-full bg-slate-800/50 backdrop-blur text-slate-400 border border-slate-700 flex items-center justify-center shadow-lg grayscale">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</button>
+</div>
+</body></html>

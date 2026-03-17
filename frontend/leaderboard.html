@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JAMB Master - Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#af25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="flex flex-col h-screen max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="p-2 rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Leaderboard</h1>
+<button class="p-2 rounded-lg hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">emoji_events</span>
+</button>
+</header>
+<!-- Toggle Tabs -->
+<div class="px-4 py-2">
+<div class="flex h-12 items-center justify-center rounded-xl bg-slate-200 dark:bg-primary/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-slate-600 dark:text-slate-400 text-sm font-semibold transition-all">
+<span>National</span>
+<input checked="" class="hidden" name="ranking-filter" type="radio" value="National"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-slate-600 dark:text-slate-400 text-sm font-semibold transition-all">
+<span>School</span>
+<input class="hidden" name="ranking-filter" type="radio" value="School"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-slate-600 dark:text-slate-400 text-sm font-semibold transition-all">
+<span>Friends</span>
+<input class="hidden" name="ranking-filter" type="radio" value="Friends"/>
+</label>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto px-4 pb-24">
+<!-- Podium Section -->
+<div class="flex items-end justify-center gap-4 py-8 mb-4">
+<!-- Rank 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="size-16 rounded-full border-4 border-slate-400 p-1 bg-background-light dark:bg-background-dark overflow-hidden shadow-lg">
+<img alt="Sarah avatar" class="w-full h-full rounded-full" data-alt="Female avatar with glasses and purple hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-sT9_4_E50AFm4sjTqjZ3q4q7_O-8jjtY0p-nOqQ0ZiwWMyT4AOrX-3V9u9OhNUj-Ul_SoRdjrtOhwQk-6MdrcKgexOl1aqNcAkspU2p6B0p1QlLeWPqI1-5-Ambqt52jlq7us1svoLygAA1CN1VD298fpB9BtSUKTR70s4_jGI7KdOdPyGvEYZ17v0TGLl_WPgQWKlG1Ys3UZJv_nBwk6Bv5DjN_G7YKi_DhlixFfbzbmRiaiCf-azSf7OfVzuRboXEVusT2Xpg"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-slate-400 text-white size-6 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+</div>
+<p class="font-bold text-sm text-slate-900 dark:text-slate-100">Sarah</p>
+<p class="text-primary text-xs font-medium">12.4k XP</p>
+</div>
+<!-- Rank 1 -->
+<div class="flex flex-col items-center gap-2 -mt-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute -top-8 left-1/2 -translate-x-1/2 text-yellow-500 text-4xl">workspace_premium</span>
+<div class="size-24 rounded-full border-4 border-yellow-500 p-1 bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl shadow-primary/20">
+<img alt="David avatar" class="w-full h-full rounded-full" data-alt="Male avatar with a crown and smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbMwIn2r0GgEnY2EyIxgMwwxDCiCxk4MF0hM4zHTOA1Fxgj-_bwaEuCGHVvPkMuXO54ePYLgWAqM7pKfa8crreCwtUxuIlfyPinYVEc9Q3mG0GkAYILlQlfBbffK2mX053btuk2NwcDxsDchnXeiUqMfiZeg_3sGEM7ptymng9qv9sbZqTTVQTOE7KkphNj52KpjLwnD8kJL8qpf45-sFS4CXCQG6Pnhb0OlRdRF-vaGWmLN9yS--2jWA8VjQKhzhVWyfjkDVJt-w"/>
+</div>
+<div class="absolute -bottom-2 -right-1 bg-yellow-500 text-white size-8 rounded-full flex items-center justify-center text-sm font-bold border-2 border-background-dark">1</div>
+</div>
+<p class="font-bold text-lg text-slate-900 dark:text-slate-100">David O.</p>
+<p class="text-primary text-sm font-bold">15.8k XP</p>
+</div>
+<!-- Rank 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="size-16 rounded-full border-4 border-orange-600 p-1 bg-background-light dark:bg-background-dark overflow-hidden shadow-lg">
+<img alt="Mike avatar" class="w-full h-full rounded-full" data-alt="Male avatar with cool shades" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUI1XOwMN7V6NdIEtw-J5sPRZKNH3IkqbMDZ3vuGlywqSc68ji1hc4sJ30DHAvyLIR9nJOl_bXYriAwlONn08KnjC4qLi3rTy26v3hpVATEQLfW7ChsShp27lI19Mbv1uNTMGsiIzaoanb0vCMRxoHNLIM34ltw69zPugqhsjCVtlsGOKZDKFAY888YFco14rf_fzTwxP5DKtg0S9vuU2Kdc_JHWbQLj9r78vXkLzANY8bFFOPpi1vmo85dhy2e3JJdAOz73UTpM8"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-orange-600 text-white size-6 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+</div>
+<p class="font-bold text-sm text-slate-900 dark:text-slate-100">Mike</p>
+<p class="text-primary text-xs font-medium">11.9k XP</p>
+</div>
+</div>
+<!-- Rankings List -->
+<div class="space-y-3">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest px-1">Global Rankings</h3>
+<!-- Player Item -->
+<div class="flex items-center gap-4 p-3 rounded-xl bg-slate-100 dark:bg-primary/5 border border-slate-200 dark:border-primary/10 transition-transform active:scale-95">
+<span class="w-6 text-center font-bold text-slate-400">4</span>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Chioma avatar" data-alt="Profile image of a young student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSN9Amf8SICPgQonoAmQtHLb5-wnN-68-fi5ojkZfmfCFgpa7oT21I-1g-7xGPfF6cjp7AmaAJItCAtPojF8w6PAMm0ksu6MGnEwXdtyCWZyNXaezQMtDr0cSP3zxQX-es3I2beE7GBtqpHYwweAUYfd1aj1YOWf2g0LDOD3FUsOdtX52SYfHvpLKydgl0lvAb0pkkOcikzbly--ya5V54wbXSAAb8hz6a4NMlzEChqOYT4FDCAZJOHw06MTLTrIYDugaPvV-ZjWk"/>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-slate-100">Chioma Ada</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">military_tech</span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase">Elite Scholar</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">10.2k</p>
+<p class="text-[10px] text-slate-500 uppercase">XP</p>
+</div>
+</div>
+<!-- Player Item (Current User) -->
+<div class="flex items-center gap-4 p-3 rounded-xl bg-primary/20 border-2 border-primary">
+<span class="w-6 text-center font-bold text-primary">5</span>
+<div class="size-10 rounded-full border-2 border-primary bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="User avatar" data-alt="Personal user profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN6Zgnp45z3lDf5cMe3oL_NZ5l9qPe2ieIborHiRmNb0-w2bB3gfCscF3Xpojj7BKXrw08MDSSVc5lR2nsM60OMjtMD7OQJa6_w7r-1XzQ-79pGiBXwCC8vqRuO_KO_HXeuWlboJivviuc1cL-7c3m2raPK7bI67HFraKSoNWNl8ZhqGRRQt4aPJHK2Rwbd1OqPOhvVQYAvCXVWKqB1PDE9JfIdGBWUACL1bL4kt0L0Z3d0rdzeeBaaNmCn6uCJlmrm3k_-kMlp88"/>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-slate-100">You</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase">Hot Streak x5</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">9.8k</p>
+<p class="text-[10px] text-slate-500 uppercase">XP</p>
+</div>
+</div>
+<!-- Player Item -->
+<div class="flex items-center gap-4 p-3 rounded-xl bg-slate-100 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+<span class="w-6 text-center font-bold text-slate-400">6</span>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Ahmed avatar" data-alt="Student avatar with traditional cap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC70yrMXy1_PiTT8JUTicn2UnKRKg2ftjoRMnsrpLrD3UXFSlxn2eyNkD48zy-RTWe33tvqFJiRIBpkAehUfHIruAa9y1qDAOV66MjcjN7lQQVCw0h9ByZbvJkeAPceVGIHgI_zAHwA8fjNMNUD3nz2JdZc2Y8b8wH4gBxcf4S_Q5pvcDHSgfYBU7FRCN8xuL4UdQCLOPyVILNo4lkK3qUJusyDk3I2dxTkZKT0heIp27pqjVUWFYeYWMaJSMJVyxATDoM1qssDDi4"/>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-slate-100">Ahmed Ibrahim</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-400">auto_awesome</span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase">Consistent</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">9.5k</p>
+<p class="text-[10px] text-slate-500 uppercase">XP</p>
+</div>
+</div>
+<!-- Player Item -->
+<div class="flex items-center gap-4 p-3 rounded-xl bg-slate-100 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+<span class="w-6 text-center font-bold text-slate-400">7</span>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="Faith avatar" data-alt="Female avatar with smiling face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9UhQtKzNgm8iPKv0maf4GUQCAxNGJ4WUnS3URAtQffj1m_geK3B7EJBBiIEMvfd0KIh7kk5uGLu6eVkgW3fz0bAEstbDvt9-rBOUAtVAtRMsjPXasvsWpv7buIDCcbyty0sTR0VU5Ua-mmQc17sZfXzxUZnETk-RW0HWdylOqDRN_ge8EyaIj-ecRtHPsIsgEgmlQIDG2VG-0PsJrKJ1r0K8rshF56U0bYzsp-y9wa3giqjKK2M33lYJMtX_yFbo0NTiG9u7TNng"/>
+</div>
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-slate-100">Faith Okon</p>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">school</span>
+<span class="text-[10px] font-medium uppercase">Study Master</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">8.9k</p>
+<p class="text-[10px] text-slate-500 uppercase">XP</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t border-slate-200 dark:border-primary/20 bg-background-light dark:bg-background-dark/95 backdrop-blur-md px-4 pb-6 pt-2 flex justify-between items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">house</span>
+<span class="text-[10px] font-medium uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">book_4</span>
+<span class="text-[10px] font-medium uppercase">Practice</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="text-[10px] font-bold uppercase">Ranks</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

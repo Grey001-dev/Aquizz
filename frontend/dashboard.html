@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#af25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>JAMB Prep Dashboard</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Top Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="User profile avatar illustration" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAi2YcLTiGueKX_YRZhwyGDUxe7IM78hCRSNNa0yjI1_1jkX4pzaf7ngzgKCRQ4SjmXdidAHqXcZEkTC_ywRxS7cPp2rX2e6qNLYi7G4URPRViX6DdgKJc6Q6qE874YaKvAXGqhpdtIUsOw4I86aZoSEq9f9QPP0hK3HSygZQabMM0HfnuoxX8Y29Y_hdPulndQV00zLKUFm2aggyqp0q_y0YM68225gEazCBItPoRqehiBl9k0RRZn52LZJEc-a9sv3xvHu0RFKzQ')"></div>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-none">JAMB Master</h1>
+<p class="text-xs text-primary font-medium">Lvl 15 Explorer</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto p-4 space-y-6">
+<!-- Hero Progress Card -->
+<section class="bg-gradient-to-br from-primary to-purple-800 rounded-xl p-6 text-white shadow-xl shadow-primary/20">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-primary-100 text-sm opacity-90">Total Experience</p>
+<h2 class="text-3xl font-bold">14,250 XP</h2>
+</div>
+<div class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold border border-white/30">
+                    RANK #42
+                </div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-medium">
+<span>Level 15</span>
+<span>1,250 XP to Lvl 16</span>
+</div>
+<div class="h-3 w-full bg-black/20 rounded-full overflow-hidden border border-white/10">
+<div class="h-full bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)]" style="width: 75%;"></div>
+</div>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 bg-white text-primary font-bold py-3 rounded-lg text-sm hover:bg-slate-100 transition-colors">
+                    View Profile
+                </button>
+<button class="flex-1 bg-primary-900/30 border border-white/30 text-white font-bold py-3 rounded-lg text-sm backdrop-blur-sm">
+                    Leaderboard
+                </button>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-orange-500">local_fire_department</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Streak</span>
+</div>
+<p class="text-2xl font-bold">12 Days</p>
+<p class="text-xs text-green-500 font-bold mt-1">+2 Streak Freeze</p>
+</div>
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-yellow-500">emoji_events</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">League</span>
+</div>
+<p class="text-2xl font-bold">Gold II</p>
+<p class="text-xs text-primary font-bold mt-1">Top 5%</p>
+</div>
+</section>
+<!-- Main Action -->
+<section>
+<button class="w-full bg-primary hover:bg-primary/90 text-white p-6 rounded-xl flex items-center justify-between group shadow-lg shadow-primary/30">
+<div class="flex items-center gap-4">
+<div class="size-14 bg-white/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div class="text-left">
+<h3 class="text-xl font-bold">Quick Start CBT</h3>
+<p class="text-primary-100 text-sm opacity-80">Full mock exam simulation</p>
+</div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</button>
+</section>
+<!-- Upcoming Tournaments -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold">Upcoming Tournaments</h3>
+<a class="text-primary text-sm font-bold" href="#">See All</a>
+</div>
+<div class="space-y-3">
+<!-- Tournament Card 1 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-4 rounded-xl flex items-center gap-4">
+<div class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Biology Blitz Championship</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Starts in 2h 15m • 500 Entry XP</p>
+</div>
+<button class="bg-primary/10 text-primary text-xs font-bold px-4 py-2 rounded-lg">Join</button>
+</div>
+<!-- Tournament Card 2 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-4 rounded-xl flex items-center gap-4">
+<div class="size-12 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Maths Masters League</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Tomorrow, 10:00 AM • Free</p>
+</div>
+<button class="bg-primary/10 text-primary text-xs font-bold px-4 py-2 rounded-lg">Join</button>
+</div>
+<!-- Tournament Card 3 -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/10 p-4 rounded-xl flex items-center gap-4">
+<div class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">English Proficiency Clash</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Starts in 5h 40m • 200 Entry XP</p>
+</div>
+<button class="bg-primary/10 text-primary text-xs font-bold px-4 py-2 rounded-lg">Join</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 px-4 pb-6 pt-3">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">book_5</span>
+<span class="text-[10px] font-bold">Practice</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<span class="text-[10px] font-bold">League</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action for Quick Study (Optional visual flair) -->
+<div class="fixed bottom-24 right-6">
+<button class="size-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</button>
+</div>
+</body></html>
