@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@theme {
+  --color-primary: #af25f4;
+  --color-background-light: #f7f5f8;
+  --color-background-dark: #1c1022;
+  --font-display: "Space Grotesk", "sans-serif";
+}
+
+/* New v4 way to handle transitions */
+@utility transition-custom {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

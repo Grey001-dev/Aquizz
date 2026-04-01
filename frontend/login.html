@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JAMB Prep - Level Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="script.js" defer></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#af25f4",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#1c1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-3xl">chevron_left</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1">Login to your account</h2>
+</div>
+<!-- Hero Section -->
+<div class="px-4 pt-6 pb-3">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-[32px] font-bold leading-tight">Level Up Your Prep</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal mt-2">Join thousands of students smashing their JAMB goals.</p>
+</div>
+<!-- Social/Auth Options -->
+<div class="flex flex-col gap-3 px-4 py-3">
+<button class="flex items-center justify-center gap-3 w-full h-14 rounded-xl bg-white dark:bg-primary/10 border border-primary/20 hover:bg-primary/5 transition-colors">
+<img alt="" class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_6IhH76-hwDZm2UhJwfKkcoeR5dIw7NIcBv0ol2wp-66ai0Ol8gITzgDQlO3bVksOXBhTy9mXzEpKHGPH_oY9wRiueW74rE7VH3NJcSEhdcKSNMGwdcygxUUv6_cKzq98k105WtaK_LRHFJ6gnWulz97mZY5r7TjcWeF2iiGwJ9S739vILyq-aV7ZFnBIkLLcnhzWLmuwySWAQtaQNwyPFo23ZXt1eX_56ZhI5Dq2IcQSRFBWwFRhOJanNdchFj8Tw6_g6hAPeP0"/>
+<span class="font-bold">Continue with Google</span>
+</button>
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-primary/20"></div>
+<span class="text-primary/40 text-xs font-bold uppercase tracking-widest">or</span>
+<div class="h-px flex-1 bg-primary/20"></div>
+</div>
+
+<label class="flex flex-col gap-2">
+<span class="text-sm font-bold text-primary/80 ml-1">Email or Phone</span>
+<input class="form-input w-full rounded-xl bg-white dark:bg-primary/5 border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary h-14 px-4 text-base" placeholder="student@jamb.com" id="email" type="text"/>
+</label>
+
+<label class="flex flex-col gap-2">
+<span class="text-sm font-bold text-primary/80 ml-1">Create password</span>
+<input class="form-input w-full rounded-xl bg-white dark:bg-primary/5 border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary h-14 px-4 text-base" placeholder="******" id="createPassword" type="password"/>
+</label>
+
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-14 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 mt-2" onclick="loginUser()">
+<span>Kick off where you stopped</span>
+<span class="material-symbols-outlined ml-2">rocket_launch</span>
+</button>
+
+<p class="flex w-full justify-center">Do not have an account? <a href="signup.html"> Signup</a></p>
