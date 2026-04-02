@@ -1,16 +1,48 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { createContext } from "react";
+import Practice from "./Practice";
+import { UsernameContext } from "./UsernameContext";
+
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const loginUser = () => {
-    console.log(email, password);
-  };
+  const {setUsername}=useContext(UsernameContext)
   const navigate=useNavigate()
+  let data;
+  
+  const loginUser = async () => {
+    console.log(email, password);
+    const res = await fetch("https://aquizz.onrender.com/api/aquizz/user/login",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify ({
+        email, password
+      })
+    })
 
+    data = await res.json();
+    if(res.ok){
+      console.log(data);
+      const FetchedUsername=data.user.username
+      setUsername(FetchedUsername)
+      localStorage.setItem("username",FetchedUsername)
+      navigate("/home")
+    } else{
+      alert(data.message);
+    }
+  };
+  
+  if(data){
+    console.log(data)
+  }
   return (
+    
     <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+      
       
       <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 

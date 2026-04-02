@@ -5,8 +5,33 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const navigate=useNavigate();
-  const signUp = () => {
-  console.log(email, password, username);
+  const signUp = async () => {
+    console.log(email, password, username);
+    try{
+      const res = await fetch("https://aquizz.onrender.com/api/aquizz/user/create",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username, 
+          email, 
+          password
+        }),
+      });
+      console.log("STATUS:", res.status);
+      const data = await res.json();
+    
+      if(res.ok){
+        console.log(data.message);
+        navigate("/")
+      } else{
+        alert(data.message);
+        console.log(res)
+    }
+    }catch(error){
+      console.error(error) 
+    }
 };
 
   return (
